@@ -95,6 +95,8 @@ class FormBuilderSearchableDropdown<T> extends FormBuilderField<T> {
   ///custom dropdown icon button properties
   final DropdownButtonProps? dropdownButtonProps;
 
+  final Key? dropDownSearchKey;
+
   /// Creates field for selecting value(s) from a searchable list
   FormBuilderSearchableDropdown({
     Key? key,
@@ -136,6 +138,7 @@ class FormBuilderSearchableDropdown<T> extends FormBuilderField<T> {
     this.clearButtonProps,
     this.dropdownSearchTextStyle,
     this.dropdownButtonProps,
+    this.dropDownSearchKey,
   })  : assert(T == String || compareFn != null),
         isMultiSelectionMode = false,
         dropdownBuilderMultiSelection = null,
@@ -161,7 +164,7 @@ class FormBuilderSearchableDropdown<T> extends FormBuilderField<T> {
             final state = field as FormBuilderSearchableDropdownState<T>;
             return DropdownSearch<T>(
               // Hack to rebuild when didChange is called
-              key: UniqueKey(),
+              key: dropDownSearchKey ?? UniqueKey(),
               asyncItems: asyncItems,
               clearButtonProps: clearButtonProps ??
                   ClearButtonProps(isVisible: showClearButton),

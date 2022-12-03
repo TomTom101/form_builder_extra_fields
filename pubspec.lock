@@ -53,9 +53,11 @@ packages:
   dropdown_search:
     dependency: "direct main"
     description:
-      name: dropdown_search
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "9f1b1d67b62a2a6f23caf520c4fb078f02027312"
+      url: "https://github.com/TomTom101/searchable_dropdown.git"
+    source: git
     version: "5.0.3"
   fake_async:
     dependency: transitive
