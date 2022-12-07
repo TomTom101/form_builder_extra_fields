@@ -16,9 +16,7 @@ dependencies:
   flutter_form_builder: ^7.3.1
   flutter_chips_input: ^2.0.0
   flutter_colorpicker: ^1.0.3
-  dropdown_search:
-    git:
-      url: https://github.com/TomTom101/searchable_dropdown.git
+  dropdown_search: ^5.0.5
   signature: ^5.0.1
   flutter_touch_spin: ^2.0.0
   intl: ^0.17.0
